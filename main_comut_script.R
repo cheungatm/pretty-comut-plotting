@@ -4,6 +4,7 @@
 #'               script), creates each subplot, and uses the 'egg' package to align and plot the figures together.
 #' 
 
+## Take in arguments from the command line
 args <- commandArgs(trailingOnly = TRUE)
 maf_with_pair_id_path <- args[1]
 snv_gene_list_path <- args[2]
@@ -35,38 +36,32 @@ source('./scripts/plot_CNA_bar.R')
 source('./scripts/plot_purity_tile.R')
 source('./scripts/plot_TMB_bar.R')
 
-
 ### Load files from subdirectory '.test_data/' ###
-#maf_with_pair_id = read_tsv('./test_data/shuffled_maf_with_pair_id.maf', comment = '#')
+maf_with_pair_id = read_tsv('./test_data/shuffled_maf_with_pair_id.maf', comment = '#')
+snv_gene_list = read_tsv('./test_data/shuffled_snv_gene_list.tsv')
+cna_gene_list = read_tsv('./test_data/shuffled_cna_gene_list.tsv')
+cna_focality_file = read_tsv('./test_data/shuffled_focality_file.tsv')
+melted_clinical_response_df = read_tsv('./test_data/shuffled_melted_clinical_response.tsv')
+melted_genomics_df = read_tsv('./test_data/shuffled_melted_genomics.tsv')
+pair_order_list = read_tsv('./test_data/shuffled_pair_order.tsv')
+gene_order_list = read_tsv('./test_data/shuffled_gene_order.tsv')
+
+### Load files from args input ###
 maf_with_pair_id = read_tsv(maf_with_pair_id_path, comment = '#')
-
-#snv_gene_list = read_tsv('./test_data/shuffled_snv_gene_list.tsv')
 snv_gene_list = read_tsv(snv_gene_list_path)
-
-#cna_gene_list = read_tsv('./test_data/shuffled_cna_gene_list.tsv')
 cna_gene_list = read_tsv(cna_gene_list_path)
-
-#cna_focality_file = read_tsv('./test_data/shuffled_focality_file.tsv')
 cna_focality_file = read_tsv(cna_focality_file_path)
-
-#melted_clinical_response_df = read_tsv('./test_data/shuffled_melted_clinical_response.tsv')
 melted_clinical_response_df = read_tsv(melted_clinical_response_df_path)
-
-#melted_genomics_df = read_tsv('./test_data/shuffled_melted_genomics.tsv')
 melted_genomics_df = read_tsv(melted_genomics_df_path)
-
-#pair_order_list = read_tsv('./test_data/shuffled_pair_order.tsv')
 pair_order_list = read_tsv(pair_order_list_path)
-
-#gene_order_list = read_tsv('./test_data/shuffled_gene_order.tsv')
 gene_order_list = read_tsv(gene_order_list_path)
 
 
 ### Run functions to build each sub-plot ###
 # build co-mut frame for plotting
 test_comut_frame <- build_comut_frame(maf_file_large = maf_with_pair_id, snv_genes = snv_gene_list, focality_file = cna_focality_file, cna_genes = cna_gene_list)
-
 # create tile plot of SNVs and CNAs in specified order (determined by input file)
+
 test_comut_plot <- plot_comut_frame(comut_frame = test_comut_frame, pair_order = pair_order_list, gene_order = gene_order_list) +
   theme(plot.margin = margin(-5,0,0,0))
 
