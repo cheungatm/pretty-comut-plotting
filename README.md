@@ -1,4 +1,4 @@
-# pretty_comut_plotting
+# pretty-comut-plotting
 
 This Rproject allows users to create an aesthetically pleasing "co-mut" plot that shows various clinical and genomic features of each patient in an easy-to-read panel figure.
 
