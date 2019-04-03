@@ -1,5 +1,7 @@
 #' @title Pre-set color fills for co-mut aesthetics
 #'
+#' @description The list of included clinical and genomic features is by no means exhaustive, but one can include any label of choice in one's data to correspond
+#'              to a particular color!
 #'
 
 # Clinical variables fill colors 
