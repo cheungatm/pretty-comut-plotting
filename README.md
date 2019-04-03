@@ -35,5 +35,5 @@ pretty-comut-plotting requires R 3.5.0 as well as dplyr, tidyr, ggplot2, reader,
 
 ## Acknowledgments
 
-* Shoutout to Claire Margolis and Natalie Vokes for their initial Rscripts!
+* Shoutout to Claire Margolis and Natalie Vokes of the Van Allen Lab for their initial Rscripts!
 
