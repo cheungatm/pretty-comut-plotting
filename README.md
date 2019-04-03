@@ -4,9 +4,9 @@ This Rproject allows users to create an aesthetically pleasing "co-mut" plot tha
 
 ## Getting Started
 
-Although the user can immediately create co-mut plots using the main_comut_script.R given the correctly formatted data files, the main purpose of this repo is to provide helper functions and Rscript examples to allow others to customize and view their own plots. As a result, this should be run in RStudio (or preferred IDE). Not all clinical or genomic features have been included (i.e. drug names or response labels), but one can add their own to the fill_pallettes.R script.
+Although the user can immediately create co-mut plots using the _main_comut_script.R_ given the correctly formatted data files, the main purpose of this repo is to provide helper functions and Rscript examples to allow others to customize and view their own plots. As a result, this should be run in RStudio (or preferred IDE). Not all clinical or genomic features have been included (i.e. drug names or response labels), but one can add their own to the _fill_pallettes.R script_.
 
-### Parameters for main_comut_script.R
+### Parameters for _main_comut_script.R_
 
 --maf_with_pair_id = a maf file that must include column names: 'pair_id', 'Hugo_Symbol', 'Variant_Classification', and 'Protein_Change'
 
