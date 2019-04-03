@@ -3,7 +3,7 @@
 This Rproject allows users to create an aesthetically pleasing "co-mut" plot that shows various clinical and genomic features of each patient in an easy-to-read panel figure.
 
 
-![Example pretty comut plot](https://github.com/cheungatm/pretty-comut-plotting/blob/master/example_comut_plot.png)
+![Example pretty comut plot](https://github.com/cheungatm/pretty-comut-plotting/blob/master/images/example_comut_plot.png)
 
 ## Getting Started
 
@@ -80,7 +80,7 @@ TP53_cna |
 
 ### Installing
 
-pretty-comut-plotting requires R 3.5.0 as well as dplyr, tidyr, ggplot2, reader, and egg
+pretty-comut-plotting requires R 3.5.0 as well as the packages dplyr, tidyr, ggplot2, readr, and egg
 
 ## Authors
 
